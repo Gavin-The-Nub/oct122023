@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two-Sided Layout</title>
+    <link rel="stylesheet" href="userInfo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/76fefd33c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        text-decoration: none;
+        list-style: none;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Styles for the left side */
+      .left-side {
+        display: flex;
+        flex-direction: column; /* Center content vertically */
+        justify-content: center;
+        align-items: center;
+        background-color: #007bff;
+        color: #fff;
+        padding: 20px;
+        flex-shrink: 0;
+        text-align: center;
+        position: relative;
+      }
+
+      .return {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .return a {
+        color: white;
+      }
+
+      .profile {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px; /* Add margin to separate from the text */
+      }
+      .prof {
+        width: 150px;
+        border-radius: 50%;
+      }
+
+      /* Styles for the right side */
+      .right-side {
+        flex: 1;
+        background-color: #fff;
+        padding: 20px;
+      }
+
+      /* Styles for the top section of the right side */
+      .top-section {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 20px;
+      }
+
+      .editBtn {
+        border: none;
+      }
+
+      .edit {
+        width: 18px;
+        border: none;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      /* Styles for the bottom section of the right side */
+      .bottom-section {
+        padding-top: 20px;
+        background-color: #007bff;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        color: white;
+      }
+
+      /* Media query for smaller screens */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .left-side {
+          padding: 20px;
+        }
+
+        .right-side {
+          margin-top: 20px;
+        }
+      }
+
+      /* Style to hide the vertical scrollbar */
+      .fixed-height-section {
+        max-height: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <!-- Centered content on the left side -->
+        <div class="profile">
+          <img class="prof" src="./photos/download (1).png" />
+          <!-- Circular profile picture centered -->
+          <!-- You can add an image source here if needed -->
+        </div>
+        <h1>User Example</h1>
+        <h6>STUDENT ID: 1232341</h6>
+        <div class="return">
+          <ul>
+            <li>
+              <a href="indexLoggedIn.html"><p>Return Home</p></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-side">
+        <!-- Top section on the right side -->
+        <div class="top-section">
+          <h3>
+            <i class="fa fa-clone"></i> General Information
+            <button class="editBtn">
+              <a href="user.html"
+                ><img class="edit" src="./photos/edit-solid.svg"
+              /></a>
+            </button>
+          </h3>
+
+          <table>
+            <tr class="a">
+              <th>Contact Number</th>
+              <td>:</td>
+              <td id="contact">09763072147</td>
+            </tr>
+            <tr>
+              <th>Email Address</th>
+              <td>:</td>
+              <td id="email">Example@gmail.com</td>
+            </tr>
+            <tr>
+              <th>Address</th>
+              <td>:</td>
+              <td id="address">Batangas, Lipa City</td>
+            </tr>
+          </table>
+        </div>
+        <!-- Bottom section on the right side -->
+        <div class="bottom-section">
+          <p>
+            <strong>Scholarship Status:</strong>&nbsp; &nbsp; &nbsp;
+            &nbsp;&nbsp; &nbsp;- full scholarship
+          </p>
+          <p>
+            <strong>Academic Year:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp;&nbsp;- 2033-2034
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Retrieve data from local storage
+    const savedData = JSON.parse(localStorage.getItem("studentProfile")) || {};
+
+    // Populate the fields with the retrieved data
+    document.getElementById("contact").textContent = savedData.contact || "";
+    document.getElementById("email").textContent = savedData.email || "";
+    document.getElementById("address").textContent = savedData.address || "";
+  </script>
+</html>

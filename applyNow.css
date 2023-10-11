@@ -1,0 +1,334 @@
+* {
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+/*header css*/
+a {
+  font-family: "Open Sans", arial, sans-serif;
+}
+header {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+.nav-list {
+  display: flex;
+  flex: 1;
+}
+.left {
+  display: flex;
+  flex: 1;
+  margin-left: 40px;
+}
+.logo img {
+  height: 80px;
+  border-radius: 100px;
+  padding-top: 30px;
+}
+
+.middle {
+  display: flex;
+  flex: 1;
+}
+.middle li {
+  margin-right: 12px;
+}
+.middle li a {
+}
+.right {
+  display: flex;
+  flex: 1;
+}
+.right li {
+  flex: 1;
+  text-align: right;
+  margin-right: 12px;
+  flex-wrap: wrap;
+}
+
+/*this css is for the design and hover effect of the header's nav*/
+ul {
+  margin: 150px auto 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  text-align: center;
+}
+li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
+/*header css end*/
+
+/*acad style*/
+.acad {
+  padding-top: 150px;
+  background-color: rgb(0, 54, 0);
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.acadC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 60vw;
+  height: 65vh;
+  position: relative;
+}
+.acadC button {
+  width: 7vw;
+  height: 4vh;
+  position: absolute;
+  bottom: 11em;
+  left: 26em;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+  border: none;
+  z-index: 3;
+}
+.acadC button:hover {
+  background-color: rgb(0, 160, 0);
+}
+.acadC img {
+  position: absolute;
+  width: 35vw;
+  top: 0;
+  right: 0;
+  border: solid rgb(255, 255, 255) 10px;
+}
+.acadT {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 35vw;
+  height: 30vh;
+  color: black;
+  bottom: 2em;
+  left: 2em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: solid rgb(255, 255, 255) 10px;
+}
+.acadT h2 {
+  color: rgb(70, 70, 70);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.acadT h5 {
+  color: rgb(70, 70, 70);
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.acadT div {
+  background-color: rgb(20, 20, 20);
+  position: absolute;
+  width: 30vw;
+  height: 3px;
+  bottom: 120px;
+  left: 40px;
+}
+
+/*model style*/
+.model {
+  background-color: rgb(0, 54, 0);
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.modelC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 60vw;
+  height: 65vh;
+  position: relative;
+}
+.modelC button {
+  width: 7vw;
+  height: 4vh;
+  position: absolute;
+  bottom: 11em;
+  left: 26em;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+  border: none;
+  z-index: 3;
+}
+.modelC button:hover {
+  background-color: rgb(0, 160, 0);
+}
+.modelC img {
+  position: absolute;
+  width: 35vw;
+  top: 0;
+  right: 0;
+  border: solid rgb(255, 255, 255) 10px;
+}
+.modelT {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 35vw;
+  height: 30vh;
+  color: black;
+  bottom: 2em;
+  left: 2em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: solid rgb(255, 255, 255) 10px;
+}
+.modelT h2 {
+  color: rgb(70, 70, 70);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.modelT h5 {
+  color: rgb(70, 70, 70);
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.modelT div {
+  background-color: rgb(20, 20, 20);
+  position: absolute;
+  width: 30vw;
+  height: 3px;
+  bottom: 120px;
+  left: 40px;
+}
+
+/*tulong financial style */
+.tf {
+  background-color: rgb(0, 54, 0);
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.tfC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 60vw;
+  height: 65vh;
+  position: relative;
+}
+.tfC button {
+  width: 7vw;
+  height: 4vh;
+  position: absolute;
+  bottom: 11em;
+  left: 26em;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+  border: none;
+  z-index: 3;
+}
+.tfC button:hover {
+  background-color: rgb(0, 160, 0);
+}
+.tfC img {
+  position: absolute;
+  width: 35vw;
+  top: 0;
+  right: 0;
+  border: solid rgb(255, 255, 255) 10px;
+}
+.tfT {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  width: 35vw;
+  height: 30vh;
+  color: black;
+  bottom: 2em;
+  left: 2em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: solid rgb(255, 255, 255) 10px;
+}
+.tfT h2 {
+  color: rgb(70, 70, 70);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.tfT h5 {
+  color: rgb(70, 70, 70);
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.tfT div {
+  background-color: rgb(20, 20, 20);
+  position: absolute;
+  width: 30vw;
+  height: 3px;
+  bottom: 120px;
+  left: 40px;
+}
+
+/*line design*/
+.bottom-line {
+  width: 9 0vw;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+}

@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+}
+a {
+  font-family: "Open Sans", arial, sans-serif;
+}
+header {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+.nav-list {
+  display: flex;
+  flex: 1;
+}
+.left {
+  display: flex;
+  flex: 1;
+  margin-left: 40px;
+}
+.logo img {
+  height: 80px;
+  border-radius: 100px;
+  padding-top: 30px;
+}
+
+.middle {
+  display: flex;
+  flex: 1;
+}
+.middle li {
+  margin-right: 12px;
+}
+.middle li a {
+}
+.right {
+  display: flex;
+  flex: 1;
+}
+.right li {
+  flex: 1;
+  text-align: right;
+  margin-right: 12px;
+  flex-wrap: wrap;
+}
+
+/*this css is for the design and hover effect of the header's nav*/
+ul {
+  margin: 150px auto 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  text-align: center;
+}
+li {
+  display: table-cell;
+  position: relative;
+  padding: 15px 0;
+}
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="scholarshipHeader.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <script
+      src="https://kit.fontawesome.com/76fefd33c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /*start of headers css*/
+      /* Common CSS */
+      * {
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      a {
+        font-family: "Open Sans", Arial, sans-serif;
+      }
+
+      header {
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: transparent;
+        z-index: 1;
+      }
+      .nav-list {
+        display: flex;
+        flex: 1;
+      }
+      .left {
+        display: flex;
+        flex: 1;
+        margin-left: 40px;
+      }
+      .logo img {
+        height: 80px;
+        border-radius: 40px;
+      }
+
+      .middle {
+        display: flex;
+        flex: 1;
+      }
+      .middle li {
+        margin-right: 12px;
+      }
+      .middle li a {
+      }
+      .right {
+        display: flex;
+        flex: 1;
+      }
+      .right li {
+        flex: 1;
+        text-align: right;
+        margin-right: 12px;
+        flex-wrap: wrap;
+      }
+
+      /*this css is for the design and hover effect of the header's nav*/
+      ul {
+        margin: 150px auto 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        text-align: center;
+      }
+      li {
+        display: table-cell;
+        position: relative;
+        padding: 15px 0;
+      }
+      a {
+        color: rgb(44, 44, 44);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+      }
+      a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background-color: #333333;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      a:hover:after {
+        width: 100%;
+        left: 0;
+      }
+      @media screen and (max-height: 300px) {
+        ul {
+          margin-top: 40px;
+        }
+      }
+      /*end of headers css*/
+
+      #requirementsShs {
+        display: none;
+      }
+      #requirementsCollege {
+        display: none;
+      }
+
+      body {
+      }
+
+      .sticky {
+        position: fixed;
+        right: 0;
+        top: 75%;
+        width: 120px;
+        height: 20px;
+        color: white;
+        background-color: rgb(10, 138, 10);
+        border: none;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: center;
+        z-index: 2;
+        font-weight: 700;
+      }
+      .sticky:hover {
+        background-color: rgb(27, 116, 46);
+        cursor: pointer;
+        position: fixed;
+        right: 0;
+        top: 75%;
+        width: 120px;
+        height: 20px;
+        border: none;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: center;
+        z-index: 2;
+        font-weight: 700;
+      }
+      .removeStyle {
+        position: fixed;
+        color: white;
+        right: 0;
+        top: 75%;
+        width: 120px;
+        height: 20px;
+        background-color: rgb(10, 138, 10);
+        border: none;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        z-index: 2;
+      }
+      .removeStyle:after {
+        display: none;
+      }
+      .removeStyle:hover:after {
+        display: none;
+      }
+
+      .containerA {
+        top: -40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+      .containerA h1 {
+        font-weight: 800;
+        color: rgb(44, 44, 44);
+      }
+      .background {
+        top: -110px;
+        left: -6px;
+        background-image: url(./photos/pro-student.jpg);
+        height: 100vh;
+        width: 98.7vw;
+        z-index: -2;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .containerB {
+        display: flex;
+        height: 70px;
+        background-color: rgb(27, 116, 46);
+        align-content: center;
+        justify-content: center;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-top: 60px;
+        padding-bottom: 20px;
+      }
+      .containerB p {
+        color: rgb(255, 255, 255);
+      }
+      .containerC {
+        background-color: rgb(44, 44, 44);
+        padding-bottom: 100px;
+        margin-top: 20px;
+        padding-top: 50px;
+      }
+      .containerC p {
+        margin-left: 100px;
+      }
+      .containerC h4 {
+        color: white;
+      }
+      .containerC h5 {
+        color: rgb(182, 182, 182);
+      }
+      @media screen and (max-width: 768px) {
+        header {
+          height: auto;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .nav-list {
+          flex-direction: column;
+          margin-top: 20px;
+        }
+
+        .left,
+        .middle,
+        .right {
+          margin: 0;
+          text-align: center;
+        }
+
+        /* Add more media queries for different screen sizes as needed */
+      }
+    </style>
+  </head>
+
+  <!--header start-->
+  <header>
+    <div class="left">
+      <div class="logo"><img src="./photos/download.png" /></div>
+    </div>
+    <div class="middle">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="scholarship.html">Scholarship</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="right">
+      <li><a href="logIn.html">Login</a></li>
+    </div>
+  </header>
+  <!--header end-->
+  <body>
+    <button class="sticky">
+      <a href="logIn.html" class="removeStyle" class="link-arrow font-reg"
+        >Apply Now!</a
+      >
+    </button>
+    <div class="background"></div>
+    <div class="containerA">
+      <h1>SCHOLARSHIPS</h1>
+    </div>
+    <div class="containerB">
+      <h3><p>SCHOLARSHIP PROGRAM FOR SY 2033-2044</p></h3>
+    </div>
+    <div class="containerC">
+      <h4><p>APPLICATION PERIOD: Nov 20 2032 to Feb 23 2033</p></h4>
+      <br />
+      <h4><p>A. ExampleA scholarship grant</p></h4>
+      <br />
+      <h5>
+        <p>
+          - This scholarship grant program aims to increase the number of
+          academic scholars by providing tuition or other tuition and other fees
+          incentives to:
+        </p>
+      </h5>
+      <br />
+      <h4><p>Eligibility</p></h4>
+      <h4><p>Academic Ranking:</p></h4>
+      <h5><p>- For incoming Grade 7 - Top 5 of SY 2031-2032</p></h5>
+      <h5><p>- For incoming Grade 8,9, and 10 - Top 1 of SY 2031-2032</p></h5>
+      <h5><p>- For incoming Grade 11 - Top 5 of SY 2031-2032</p></h5>
+      <h5>
+        <p>
+          - For incoming College - Top 10 2nd semester/final quarter of SY
+          2031-2032
+        </p>
+      </h5>
+      <h5>
+        <p>- For incoming Juris Doctor(JD) - Latin Honor College Graduate</p>
+      </h5>
+      <br />
+      <h4><p>Stanine Rank</p></h4>
+      <h5>
+        <p>
+          - Valedictorian/Top 1 must have scored at least stanine 7 in all areas
+          in the placement test
+        </p>
+      </h5>
+      <h5>
+        <p>
+          - Salutatorian/Top 2 must have scored at least stanine 6 in all areas
+          in the placement test
+        </p>
+      </h5>
+      <h5>
+        <p>
+          - 1st Honorable Mention/Top 3 up to Top 5 (for incoming Grade 7 and
+          Grade 11) up to Top 10 (for College) must have at least stanine 5 in
+          all areas in the placement test
+        </p>
+      </h5>
+      <br />
+      <h4><p>Scholarship Grants</p></h4>
+      <h5>
+        <p>
+          * The grantees are entitled to the following tuition and other fees
+          discounts when all the requirements are met:
+        </p>
+      </h5>
+      <h5>
+        <p>- Valedictorian/Top 1 - 100% discount on tuition and other fees</p>
+      </h5>
+      <h5>
+        <p>- Salutatorian/Top 2 - 75% discount on tuition and other fees</p>
+      </h5>
+      <h5>
+        <p>
+          - First Honorable Mention/Top 3 - 50% discount on tuition and other
+          fees
+        </p>
+      </h5>
+      <h5><p>- 4th to 10th Honors - 50% discount on tuition fee only</p></h5>
+      <br />
+      <h4><p>Document Requirement:</p></h4>
+      <h5><p>* Certificate of Academic Ranking of SY 2031-2032</p></h5>
+      <br />
+      <h4>
+        <p>
+          Note:<span>
+            <h5>
+              <p>
+                * Specific academic ranking is necessary for final evaluation
+                (scholarship application of students who failed to indicate the
+                Specific ranking will not be processed)
+              </p>
+            </h5></span
+          >
+        </p>
+      </h4>
+    </div>
+
+    <!--content start-->
+    <!--
+    <div class="container">
+      <p class="textA">Scholarship requirements for:</p>
+      <select id="select1">
+        <option value="" disabled selected hidden>Select</option>
+        <option value="shs">SHS</option>
+        <option value="college">College</option>
+      </select>
+      <button onclick="getOption()">Check Requirements</button>
+
+      <p id="shsReq" style="display: none">shs requirements</p>
+      <p id="collegeReq" style="display: none">college requirements</p>
+    </div> -->
+
+    <!--content end-->
+  </body>
+  <footer>
+    <div class="footerLeft">
+      <up>
+        <h2 class="footerTitle">SMARTS</h2>
+        <h5 class="footerDescr">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati
+          saepe quod optio temporibus repellat sit eius vel facilis. Obcaecati
+          optio enim cumque facere veritatis sint? Alias voluptatum rerum
+          perspiciatis consequatur!
+        </h5>
+      </up>
+      <down>
+        <h5>Copyright © 2019</h5>
+        <h5>All Rights Reserved.</h5>
+      </down>
+    </div>
+    <div class="footerMid">
+      <h5 class="browse1"><a class="changeColor" href="index.html">Home</a></h5>
+      <h5 class="browse2"><a class="changeColor" href="#">About</a></h5>
+      <h5 class="browse3"><a class="changeColor" href="#">Contact</a></h5>
+      <h5 class="browse4">
+        <a class="changeColor" href="scholarship.html">Scholarship</a>
+      </h5>
+    </div>
+    <div class="footerRight">
+      <up>
+        <h5 class="footerContact1">
+          <i class="fa-solid fa-location-dot"></i> City, Philippines
+        </h5>
+        <h5 class="footerContact2">
+          <i class="fa-solid fa-envelope"></i> temporary@gmail.com
+        </h5>
+      </up>
+      <down>
+        <h3 class="footerLink1">
+          <a class="changeColor2" target="_blank" href=""
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+        </h3>
+        <h3 class="footerLink2">
+          <a><i class="fa-brands fa-instagram"></i></a>
+        </h3>
+        <h3 class="footerLink3">
+          <a><i class="fa-brands fa-x-twitter"></i></a>
+        </h3>
+        <h3 class="footerLink4">
+          <a class="changeColor2" href=""
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+        </h3>
+      </down>
+    </div>
+  </footer>
+
+  <!--Javascript-->
+  <script type="text/javascript">
+    /*
+        let shs = document.querySelector("#shsReq");
+        let college = document.querySelector("#collegeReq");
+
+        function getOption() {
+          selectElement = document.querySelector("#select1");
+          output = selectElement.options[selectElement.selectedIndex].value;
+          if (output === "shs") {
+            shs.style.display = "block";
+            college.style.display = "none";
+          } else if (output === "college") {
+            college.style.display = "block";
+            shs.style.display = "none";
+          }
+        }
+  </script>
+</html>

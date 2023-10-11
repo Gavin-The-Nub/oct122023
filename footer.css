@@ -1,0 +1,76 @@
+footer {
+  display: flex;
+  background-color: black;
+  position: relative;
+  top: 600px;
+  left: 0;
+  right: 0;
+  height: 290px;
+  column-gap: 1em;
+}
+
+.footerLeft {
+  flex: 1;
+  display: grid;
+  margin-left: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 20px;
+}
+.footerLeft up {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footerLeft down h5 {
+  display: flex;
+  align-items: flex-end;
+  color: rgb(187, 180, 180);
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+}
+
+.footerTitle {
+  color: white;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+.footerDescr {
+  color: rgb(187, 180, 180);
+  width: 400px;
+  text-align: left;
+  font-size: 10px;
+  padding-top: 10px;
+}
+.footerRight {
+  flex: 1;
+}
+.footerRight up {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+.footerRight down {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.footerMid h5 a {
+  font-size: 10px;
+  color: rgb(187, 180, 180);
+  padding-top: 30px;
+}
+
+.footerRight h3 a {
+  color: rgb(187, 180, 180);
+  padding-top: 60px;
+}
+.footerRight h5 {
+  color: rgb(187, 180, 180);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+}
